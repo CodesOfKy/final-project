@@ -15,6 +15,13 @@
             color: white;
         }
 
+        hr{
+            height: 2px;
+            border: none;
+            background-color: rgb(36, 36, 36);
+        }
+
+
         /* Shared Section Styles */
         .full-section {
     min-height: 100vh; /* Changed from height: 100vh */
@@ -43,22 +50,22 @@
         .hero-text h1 {
             font-size: 50px;
             margin-bottom: 15px;
-            background: rgba(0, 0, 0, 0.4); /* Slightly darker for readability */
             padding: 10px;
             border-radius: 10px;
             backdrop-filter: blur(5px);
             display: inline-block;
+            color: #fff6dc;
         }
 
         .hero-text p {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #d1d5db;
+            color: #ffe186;
         }
 
         .tagline {
             font-weight: bold;
-            color: #38bdf8;
+            color: #ffe186;
         }
 
         .hero-image img {
@@ -66,54 +73,113 @@
             height: 320px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #ce0c0c; /* Changed from white to red */
+            border: 5px solid #fb9416; /* Changed from white to red */
             box-shadow: 0 10px 30px rgba(206, 12, 12, 0.3); /* Optional: added a slight red glow */
         }
 
+
+
+
+
         /* About Section Specific */
-        .about {
-            background: #0a0a0a; /* Darker solid background */
-            border-top: 2px solid #ffffff;
-        }
-
-        .about-content h2 {
-            font-size: 40px;
-            color: #ce0c0c;
-            margin-bottom: 30px;
-            
-        }
-
-        .about-content p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #ffffff;
-            margin-bottom: 20px;
-            
-        }
-
-        .skills-list {
-              list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        
-        }
-
-        .skills-list img {
-    max-width: 100%; /* Prevents the image from overflowing its container */
-    height: auto;
-    border: 5px solid #ce0c0c;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 15px;
-    margin-bottom: 25px;
+/* About Section Layout */
+.about-section {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000; /* Solid background for left side */
+    overflow: hidden;
+}
+.about-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* Change justify-content from flex-end to flex-start to move it left */
+    justify-content: flex-start; 
+    /* Adjust padding-left to control exactly how close to the edge it sits */
+    padding-left: 60px; 
+    padding-right: 40px;
+}
+.about-content {
+    /* Ensuring the container doesn't force itself into the center */
+    max-width: 600px;
+    width: 100%;
+    margin-left: 0; 
+    text-align: left;
+}
+.about-right {
+    flex: 1.6;
 }
 
-        .skills-list li::before {
-            content: "▹";
-            color: #f30505;
+.about-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes it fill the half-screen like the reference */
+    display: block;
+}
 
-        }
+/* Typography to match Reference */
+.about-content h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+    color: #ff7b00; /* Yellow like the reference, or change to #ce0c0c for your red theme */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 0; 
+    margin-bottom: 40px;
+}
+
+.skills-list li {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li::before {
+    content: "✦"; /* Matching the star/plus icon in the reference */
+    margin-right: 10px;
+    color: white;
+}
+
+.bio-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Responsive Mobile View */
+@media (max-width: 900px) {
+    .about-section {
+        flex-direction: column;
+    }
+    
+    .about-left {
+        justify-content: center;
+        padding: 40px 20px;
+        order: 2; /* Text moves below image on mobile */
+    }
+    
+    .about-right {
+        height: 50vh;
+        order: 1;
+    }
+    
+    .about-content h1 {
+        font-size: 40px;
+    }
+}
+
+
+
+
 
         /* Responsive */
         @media(max-width: 768px){
@@ -138,5 +204,91 @@
 
             .hero-text h1 { font-size: 38px; }
             .skills-list { grid-template-columns: 1fr; }
-        }
  
+       }
+
+
+       /* NAVBAR */
+/* ===== MODERN NAVBAR DESIGN ===== */
+/* ===== UPDATED MODERN NAVBAR DESIGN ===== */
+.navbar {
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ffffff; /* Solid white like the reference */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* container */
+.nav-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns everything to the left */
+    align-items: center;
+    padding: 15px 40px; /* Slimmer height */
+    gap: 40px; /* Space between logo and first link */
+}
+
+/* logo */
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #ff7b00; /* Orange/Coral tone from reference */
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+/* Remove the red underline from your old logo style */
+.logo::after {
+    display: none;
+}
+
+/* nav links wrapper */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Tighter gap between links */
+}
+
+/* link style */
+.nav-links li a {
+    text-decoration: none;
+    color: #ff7b00; /* Matching the logo color */
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase; /* All caps is key for this look */
+    letter-spacing: 1px;
+    transition: 0.2s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+/* Hover effect: Simple solid underline */
+.nav-links li a:hover {
+    color: #ff7b00; /* Slightly darker on hover */
+    background: none; /* Removed the bubble background */
+    transform: none;
+}
+
+/* Updated underline effect to match the "PORTFOLIO" style */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: #ff7b00;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%; /* Spans the full width of the word */
+}
+
+/* Optional: Active class if you want one link to stay underlined */
+.nav-links li a.active::after {
+    width: 100%;
+}
