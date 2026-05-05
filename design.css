@@ -41,7 +41,7 @@
 
         /* Hero Specific */
         .hero {
-            background-image: url('COLLAGE.png');
+            background-image: url('hero\ section\ and\ about\ me\ images/COLLAGE.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -65,7 +65,7 @@
 
         .tagline {
             font-weight: bold;
-            color: #ffe186;
+            color: #fff7dd;
         }
 
         .hero-image img {
@@ -87,7 +87,7 @@
     display: flex;
     min-height: 100vh;
     width: 100%;
-    background-color: #000; /* Solid background for left side */
+    background-color: #000000; /* Solid background for left side */
     overflow: hidden;
 }
 .about-left {
@@ -123,9 +123,13 @@
     font-size: 60px;
     font-weight: 900;
     line-height: 1;
-    color: #ff7b00; /* Yellow like the reference, or change to #ce0c0c for your red theme */
+    color: #ff7b00; 
     text-transform: uppercase;
     margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #202020;
+
 }
 
 .skills-list {
@@ -140,18 +144,19 @@
     margin-bottom: 8px;
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .skills-list li::before {
     content: "✦"; /* Matching the star/plus icon in the reference */
     margin-right: 10px;
-    color: white;
+    color: rgb(252, 147, 0);
 }
 
 .bio-text p {
     font-size: 16px;
     line-height: 1.6;
-    color: #ccc;
+    color: #fbfbfb;
     margin-bottom: 15px;
 }
 
@@ -212,7 +217,7 @@
 /* ===== MODERN NAVBAR DESIGN ===== */
 /* ===== UPDATED MODERN NAVBAR DESIGN ===== */
 .navbar {
-
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
