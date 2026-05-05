@@ -245,6 +245,15 @@
     text-decoration: none;
 }
 
+.logo a{
+    font-size: 24px;
+    font-weight: 900;
+    color: #ff7b00; /* Orange/Coral tone from reference */
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
 /* Remove the red underline from your old logo style */
 .logo::after {
     display: none;
@@ -269,6 +278,7 @@
     padding: 5px 0;
     position: relative;
 }
+
 
 /* Hover effect: Simple solid underline */
 .nav-links li a:hover {
