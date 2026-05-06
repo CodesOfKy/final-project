@@ -1,0 +1,114 @@
+<style>
+
+    /* ================= GAME DETAIL PAGE STYLES ================= */
+.detail-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    color: white;
+}
+
+.detail-header {
+    text-align: left;
+    margin-bottom: 50px;
+    border-left: 5px solid #ff7b00;
+    padding-left: 20px;
+}
+
+.detail-header h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #ff7b00;
+}
+
+.sprite-gallery-title {
+    font-size: 24px;
+    color: #ffe736;
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+}
+
+/* Sprite Grid: Smaller boxes for assets */
+.sprite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sprite-item {
+    background: #1b1b1b;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.sprite-item img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated; /* Keeps pixel art sharp */
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ff7b00;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+           <link rel="stylesheet" href="designMobile.css">
+    <title>2D Platformer - Details</title>
+</head>
+<body style="background: #0f0f0f;">
+
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">MY PORTFOLIO</a></div>
+        </div>
+    </nav>
+
+    <div class="detail-container">
+        <a href="godotProjects.html#game-gallery" class="back-btn">← BACK TO GALLERY</a>
+<center>
+        <div class="detail-header">
+            <h1>2D Platformer</h1>
+            <p class="bio-text">
+                 <br>
+                This project was my introduction to GDScript. I focused on creating smooth character 
+                movement, a double-jump mechanic, and tilemap collisions. The text in the beginning changes depending on how
+                the player dies in the game. There is also a golden apple counter that resets everytime you die.
+                
+                <br>
+                <br>
+                The sprites are all drawn by me with the 
+                use of pixilart.com website. This helped me familiarize how to draw in pixels and how to be quicker 
+                and efficient when drawing it.
+            </p>
+        </div>
+
+      <video class="responsive-video" controls muted loop autoplay playsinline>
+            <source src="game gifs/gameplay1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+
+       
+        </div>
+    </div>
+
+</body>
+</html>
+
