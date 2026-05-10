@@ -317,3 +317,27 @@
         width: 95%;        /* Gives a little breathing room on the edges of phones */
     }
 }
+
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+
+    .contact-box{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .contact-title{
+        font-size: 2rem;
+    }
+
+    .contact-info p,
+    .contact-info a{
+        font-size: 1rem;
+    }
+}
