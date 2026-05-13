@@ -276,6 +276,8 @@
          object-fit: cover;
     display: block;
         overflow:hidden;
+    will-change: transform;
+    transform: translateZ(0);
     }
 
      .gallery3d-item img{
