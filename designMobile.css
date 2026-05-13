@@ -273,6 +273,13 @@
     .gallery-item img{
         height: 150px;
     }
+
+     .gallery3d-item img{
+        height: 150px;
+    }
+
+
+
 }
 
 @media(max-width: 600px){
@@ -316,7 +323,13 @@
     .responsive-video {
         width: 95%;        /* Gives a little breathing room on the edges of phones */
     }
+
+    .bio-text {
+        font-size: 14px;
+    }
 }
+
+
 
 
 /* RESPONSIVE */
