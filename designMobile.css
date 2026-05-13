@@ -20,7 +20,7 @@
     .about-right {
         order: 1;
         width: 100%;
-        height: 40vh;
+        height: 10vh;
     }
 
     .about-right img {
@@ -34,6 +34,7 @@
         order: 2;
         padding: 20px;
         display: flex;
+        align-items: flex-start; /* ✅ FIX: removes vertical gap */
         justify-content: center;
     }
 
@@ -77,18 +78,7 @@
     }
 }
 
-/* EXTRA SMALL FIX */
-@media (max-width: 480px) {
 
-    .about-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .about-right {
-        height: 35vh;
-    }
-}
 
     /* mobile adjustment */
 @media (max-width: 768px){
@@ -102,11 +92,13 @@
 }
 
         @media(max-width: 768px){
-            .full-section {
-                height: auto;
-                padding: 80px 20px;
-            }
+           .full-section {
+        padding: 40px 20px; /* Reduced from 80px to pull content up */
 
+        
+    }
+
+    
             .container {
                 flex-direction: column-reverse;
                 text-align: center;
