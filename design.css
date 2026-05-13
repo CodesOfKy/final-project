@@ -122,6 +122,31 @@
     margin-left: 0; 
     text-align: left;
 }
+
+  .about-content2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "desc"
+            "skills";
+        gap: 12px;
+        width: 100%;
+
+    }
+    
+.about-content2 h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+     font-size: 3rem;
+    color: #ff7b00;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #202020;
+}
 .about-right {
     flex: 1.6;
 }
@@ -599,6 +624,15 @@ font-size: 16px;
     padding: 10px 25px;
 }
 
+   .projects-title3{
+      font-size: 3rem;
+    font-weight: 900;
+    color: #ff7b00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #202020;
+    padding: 10px 25px;
+    }
 
 /* CONTACT BOX */
 .contact-box{
