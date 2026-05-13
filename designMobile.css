@@ -271,7 +271,10 @@
         gap: 10px;
     }
     .gallery-item img{
-        height: 150px;
+        height: 50px;
+        width: 50px;
+         aspect-ratio:1/1;
+        overflow:hidden;
     }
 
      .gallery3d-item img{
